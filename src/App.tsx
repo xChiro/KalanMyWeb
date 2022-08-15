@@ -1,25 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import TopNavBarView from "./TopNavBar/TopNavBarView";
+import AccountBalanceView from "./AccountTransactions/AccountBalanceView";
+import CategoriesPanelView from "./Categories/CategoriesPanelView";
 
 function App() {
+  const categories = [
+    {
+      "name": "Salary",
+      "balance": 50.0,
+    },
+    {
+      "name": "Groceries",
+      "balance": -12.45,
+    }];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <TopNavBarView></TopNavBarView>
+        <div className="App-Body">
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <AccountBalanceView/>
+              </div>
+              <div className="col">
+                {/*<AccountBalanceView className="Dashboard-item"/>*/}
+                <CategoriesPanelView categories={categories} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   );
 }
 
