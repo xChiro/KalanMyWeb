@@ -1,38 +1,17 @@
 import React from 'react';
 import './App.css';
 import TopNavBarView from "./TopNavBar/TopNavBarView";
-import AccountBalanceView from "./AccountTransactions/AccountBalanceView";
-import CategoriesPanelView from "./Categories/CategoriesPanelView";
+import Dashboard from "./Dashboard/Dashboard";
 
 function App() {
-  const categories = [
-    {
-      "name": "Salary",
-      "balance": 50.0,
-    },
-    {
-      "name": "Groceries",
-      "balance": -12.45,
-    }];
-
-  return (
-      <div className="App">
-        <TopNavBarView></TopNavBarView>
-        <div className="App-Body">
-          <div className="container">
-            <div className="row">
-              <div className="col">
-                <AccountBalanceView/>
-              </div>
-              <div className="col">
-                {/*<AccountBalanceView className="Dashboard-item"/>*/}
-                <CategoriesPanelView categories={categories} />
-              </div>
+    return (
+        <div className="App">
+            <TopNavBarView />
+            <div className="App-Body">
+                <Dashboard />
             </div>
-          </div>
         </div>
-      </div>
-  );
+    );
 }
 
 export default App;

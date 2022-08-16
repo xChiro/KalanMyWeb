@@ -1,6 +1,7 @@
 import CategoryCardView from "./CategoryCardView";
+import React from "react";
 
-interface CategoriesPanelView {
+interface CategoriesPanelView  extends React.HTMLAttributes<HTMLElement>  {
     categories: Category[];
 }
 

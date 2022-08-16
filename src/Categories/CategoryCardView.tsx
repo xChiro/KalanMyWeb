@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface CategoryCardViewProps {
+interface CategoryCardViewProps extends React.HTMLAttributes<HTMLElement>  {
     name: string,
     balance: number,
 }

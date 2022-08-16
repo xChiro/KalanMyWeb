@@ -1,7 +1,6 @@
-.Dashboard-item {
+.dashboard-item {
   min-width: 10vw;
   min-height: 20vh;
-  background-color: #454545;
   border-radius: 25px;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
