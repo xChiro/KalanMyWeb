@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import TopNavBarView from "./TopNavBar/TopNavBarView";
-import Dashboard from "./Dashboard/Dashboard";
+import TopNavBarView from "./components/TopNavBar/TopNavBarView";
+import CreateAccountPageView from "./components/CraeteAccount/CreateAccountPageView";
 
 function App() {
     return (
         <div className="App">
             <TopNavBarView />
             <div className="App-Body">
-                <Dashboard />
+               <CreateAccountPageView style={{ backgroundColor: "#292929"}}/>
             </div>
         </div>
     );

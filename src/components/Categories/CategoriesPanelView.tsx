@@ -1,5 +1,6 @@
 import CategoryCardView from "./CategoryCardView";
 import React from "react";
+import {Col, Container, Row} from "react-bootstrap";
 
 interface CategoriesPanelView  extends React.HTMLAttributes<HTMLElement>  {
     categories: Category[];
@@ -21,13 +22,13 @@ function CategoriesPanelView(props: CategoriesPanelView) {
     }
 
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col">
+        <Container>
+            <Row>
+                <Col>
                     {categoriesComponents}
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 
