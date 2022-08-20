@@ -7,12 +7,15 @@ import {useAppSelector} from "./store/account/hooks";
 import {selectAccount} from "./store/account/account.slice";
 
 function App() {
-    const account =  useAppSelector(selectAccount);
-    const body = account.accountId ? <Dashboard/> : <CreateAccountPageView style={{ backgroundColor: "#292929"}}/>;
-    
+    const account = useAppSelector(selectAccount);
+    const body = account.accountId ?
+        <Dashboard/> :
+        <CreateAccountPageView 
+            style={{backgroundColor: "#292929", maxWidth: "35vw", minWidth: "350px", margin: "auto"}}/>;
+
     return (
-        <div className="App">   
-            <TopNavBarView />
+        <div className="App">
+            {account.accountId ? <TopNavBarView/> : null}
             <div className="App-Body">
                 {body}
             </div>
