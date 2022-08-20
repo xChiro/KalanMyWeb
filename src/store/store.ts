@@ -1,4 +1,11 @@
-import { compose, createStore, applyMiddleware } from "@reduxjs/toolkit";
-import {rootReducer} from "./root-reducer";
+import {configureStore} from "@reduxjs/toolkit";
+import {accountSlice} from "./account/account.slice";
 
-export const store = createStore(rootReducer);
+export const store = configureStore({
+        reducer: {
+            account: accountSlice.reducer
+        }
+    });
+
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
