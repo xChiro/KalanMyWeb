@@ -17,7 +17,7 @@ function CreateAccountFormView() {
             error => {
                 alert(error)
             });
-    }
+    };
 
     return (
         <Form onSubmit={handlerSubmit}>

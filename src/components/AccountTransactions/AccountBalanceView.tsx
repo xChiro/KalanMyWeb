@@ -1,20 +1,24 @@
 import {Col, Row, Container} from "react-bootstrap";
+import React from "react";
+import {AccountBalanceProps} from "./AccountBalanceProps";
 
-function AccountBalanceView() {
+function AccountBalanceView(props: AccountBalanceProps) {
+    let style = {fontSize: props.subTitlesFontSize};
+    
     return (
         <Container>
             <Row>
                 <Col>
-                    <h5>$-12.45</h5>
-                    <span style={{fontSize: "15px"}}>Outcome</span>
+                    <h4>{props.monthlyOutcomes}</h4>
+                    <span style={style}>Monthly Outcome</span>
                 </Col>
                 <Col>
-                    <h2>$38.45</h2>
-                    <span style={{fontSize: "20px"}}>Balance</span>
+                    <h3>{props.accountBalance}</h3>
+                    <span style={style}>Current Balance</span>
                 </Col>
                 <Col>
-                    <h5>$50.00</h5>
-                    <span style={{fontSize: "15px"}}>Incomes</span>
+                    <h4>{props.monthlyIncomes}</h4>
+                    <span style={style}>Monthly Incomes</span>
                 </Col>
             </Row>
         </Container>

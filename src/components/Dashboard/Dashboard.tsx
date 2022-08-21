@@ -24,7 +24,7 @@ function Dashboard() {
                 </Col>
                 <Col>
                     <DashboardItem title="Actual Balance" style={{backgroundColor: "#292929"}}>
-                        <AccountBalanceView/>
+                        <AccountBalanceView accountBalance={0} monthlyIncomes={0} monthlyOutcomes={0} subTitlesFontSize={12} />
                     </DashboardItem>
                     <DashboardItem title="Categories" style={{backgroundColor: "#292929"}}>
                         <CategoriesPanelView categories={categories}/>
