@@ -1,8 +1,8 @@
 import {Button, Form} from "react-bootstrap";
 import {useState} from "react";
 import {postOpenAccount} from "../../services/Accounts/AccountService";
-import {useAppDispatch} from "../../store/account/hooks";
 import {openAccount} from "../../store/account/account.slice";
+import {useAppDispatch} from "../../store/hooks";
 
 function CreateAccountFormView() {
     const [accountName, setAccountName] = useState("");
@@ -12,6 +12,7 @@ function CreateAccountFormView() {
         e.preventDefault();
         postOpenAccount(accountName).then(value => {
                 dispatch(openAccount(value));
+                window.location.reload();
             },
             error => {
                 alert(error)

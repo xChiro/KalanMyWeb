@@ -1,21 +1,29 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import TopNavBarView from "./components/TopNavBar/TopNavBarView";
 import CreateAccountPageView from "./components/CraeteAccount/CreateAccountPageView";
 import Dashboard from "./components/Dashboard/Dashboard";
-import {useAppSelector} from "./store/account/hooks";
 import {selectAccount} from "./store/account/account.slice";
+import {useAppDispatch, useAppSelector} from "./store/hooks";
+import {selectDashboard} from "./store/dashboard/dashboard.slice";
+import {getDashboard} from "./store/dashboard/getDashboard.fetch";
 
 function App() {
-    const account = useAppSelector(selectAccount);
-    const body = account.accountId ?
+    const dispatch = useAppDispatch();
+    
+    useEffect(() => {
+       dispatch(getDashboard());
+    }, [dispatch]);
+    
+    const dashboard = useAppSelector(selectDashboard);
+    const body =  dashboard.accountId ?    
         <Dashboard/> :
         <CreateAccountPageView 
             style={{backgroundColor: "#292929", maxWidth: "35vw", minWidth: "350px", margin: "auto"}}/>;
 
     return (
         <div className="App">
-            {account.accountId ? <TopNavBarView/> : null}
+            {dashboard.accountId ? <TopNavBarView/> : null}
             <div className="App-Body">
                 {body}
             </div>

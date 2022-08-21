@@ -9,7 +9,7 @@ export const accountSlice = createSlice({
             state.accountId = action.payload.accountId;
             state.accountBalance = action.payload.accountBalance;
         }
-    },
+    }
 });
 
 export const {openAccount} = accountSlice.actions;
