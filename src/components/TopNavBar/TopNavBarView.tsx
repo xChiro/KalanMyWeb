@@ -8,9 +8,8 @@ function TopNavBarView() {
             height: "3em",
             background: "#222222",
             marginBottom: ".5em",
-            borderBottom: ".1em solid #707070",
             verticalAlign: "middle",
-            padding: ".3em 10vmin 0 10vmin"
+            padding: ".3em 10vw 0px"
         }}>
             <div className="row">
                 <div className="col-2" style={{ height: "100%", textAlign: "left" }}>

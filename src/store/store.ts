@@ -1,11 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {accountSlice} from "./account/account.slice";
 import {dashboardSlice} from "./dashboard/dashboard.slice";
+import {transactionSlice} from "./transactions/transaction.slice";
 
 export const store = configureStore({
         reducer: {
-            account: accountSlice.reducer,
             dashboard: dashboardSlice.reducer,
+            transactions: transactionSlice.reducer
         }
     });
 

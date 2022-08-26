@@ -1,13 +1,18 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import DashboardModel from "./dashboard.model";
+import { getDashboard } from "./dashboard.fetch";
 import {RootState} from "../store";
-import {getDashboard} from "./getDashboard.fetch";
 
 const initialState: DashboardModel = {
     accountId: null,
     accountName: null,
+    accountBalance: 0,
+    monthlyIncomes: 0,
+    monthlyOutcomes: 0,
     accountTransactions: null,
-    categoriesBalances: null,
+    categoriesBalances: [],
+    pending: true,
+    success: false,
 };
 
 export const dashboardSlice = createSlice({
@@ -15,12 +20,21 @@ export const dashboardSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: builder => {
-        builder.addCase(getDashboard.fulfilled, (state, action) => {
-            state.accountId = action.payload.accountId;
-            state.accountName = action.payload.accountName;
-            state.accountTransactions = action.payload.accountTransactions;
-            state.categoriesBalances = action.payload.categoriesBalances;
-        })
+        builder
+            .addCase(getDashboard.fulfilled, (state, action) => {
+                state.accountId = action.payload.accountId;
+                state.accountName = action.payload.accountName;
+                state.accountBalance = action.payload.accountBalance;
+                state.monthlyIncomes = action.payload.monthlyIncomes;
+                state.monthlyOutcomes = action.payload.monthlyOutcomes;
+                state.accountTransactions = action.payload.accountTransactions;
+                state.categoriesBalances = action.payload.categoriesBalances;
+                state.pending = false;
+                state.success = true;
+            })
+            .addCase(getDashboard.pending, (state, action) => {
+                state.pending = true;
+            })
     }
 });
 

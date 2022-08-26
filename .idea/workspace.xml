@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="" />
+    <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AccountBalance/AccountBalanceProps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AccountBalance/AccountBalanceView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsItemProps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsItemView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryProps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/TransactionHeaderButtons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CurrencyFormant/CurrencyFormant.props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CurrencyFormant/CurrencyFormat.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Accounts/TransactionService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/statics/commons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/transactions/transaction.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/transactions/transaction.slice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/transactions/trasanction.fetch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AccountTransactions/AccountBalanceProps.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AccountTransactions/AccountBalanceView.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories/CategoriesPanelView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories/CategoriesPanelView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories/CategoryCardView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories/CategoryCardView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CraeteAccount/CreateAccountFormView.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CraeteAccount/CreateAccountPageView.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/Dashboard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardItems.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardItems.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Transactions/TransactionsQuickView.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Accounts/AccountService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Accounts/AccountService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/account/account.slice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/dashboard/dashboard.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dashboard/dashboard.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/dashboard/dashboard.slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dashboard/dashboard.slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/dashboard/getDashboard.fetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dashboard/dashboard.fetch.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/dashboard/transaction.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -13,24 +61,42 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2DfV9VHb4PvNSlFVHK09JLgnavB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/chiro/Documents/Projects/KalanMyWeb",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Users/chiro/Documents/Projects/KalanMyWeb/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/chiro/Documents/Projects/KalanMyWeb/src/components/AccountTransactionsSummary&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/chiro/Documents/Projects/KalanMyWeb/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/AccountTransactionsSummary" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/AccountTransactionsSummary" />
+      <recent name="$PROJECT_DIR$/src/store/transactions" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,10 +106,30 @@
       <option name="presentableId" value="Default" />
       <updated>1661089974868</updated>
       <workItem from="1661089977256" duration="71000" />
+      <workItem from="1661207940660" duration="1552000" />
+      <workItem from="1661256927974" duration="5284000" />
+      <workItem from="1661262814449" duration="5579000" />
+      <workItem from="1661343223361" duration="6573000" />
+      <workItem from="1661426811881" duration="7818000" />
+      <workItem from="1661514429333" duration="615000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

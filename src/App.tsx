@@ -1,12 +1,10 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import './App.css';
 import TopNavBarView from "./components/TopNavBar/TopNavBarView";
-import CreateAccountPageView from "./components/CraeteAccount/CreateAccountPageView";
-import Dashboard from "./components/Dashboard/Dashboard";
-import {selectAccount} from "./store/account/account.slice";
+import Dashboard from "./components/Dashboard/DashboardView";
 import {useAppDispatch, useAppSelector} from "./store/hooks";
 import {selectDashboard} from "./store/dashboard/dashboard.slice";
-import {getDashboard} from "./store/dashboard/getDashboard.fetch";
+import {getDashboard} from "./store/dashboard/dashboard.fetch";
 
 function App() {
     const dispatch = useAppDispatch();
@@ -16,10 +14,7 @@ function App() {
     }, [dispatch]);
     
     const dashboard = useAppSelector(selectDashboard);
-    const body =  dashboard.accountId ?    
-        <Dashboard/> :
-        <CreateAccountPageView 
-            style={{backgroundColor: "#292929", maxWidth: "35vw", minWidth: "350px", margin: "auto"}}/>;
+    const body =  !dashboard.pending ? <Dashboard/> : <div> Loading... </div>;
 
     return (
         <div className="App">

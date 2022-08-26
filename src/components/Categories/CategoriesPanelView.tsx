@@ -1,24 +1,21 @@
 import CategoryCardView from "./CategoryCardView";
 import React from "react";
-import {Col, Container, Row} from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
-interface CategoriesPanelView  extends React.HTMLAttributes<HTMLElement>  {
-    categories: Category[];
-}
-
-interface Category {
-    name: string;
-    balance: number;
+interface CategoriesPanelView extends React.HTMLAttributes<HTMLElement> {
+    categories: any;
 }
 
 function CategoriesPanelView(props: CategoriesPanelView) {
 
     const categoriesComponents = [];
 
-    for (const current of props.categories) {
-        categoriesComponents.push(
-            <CategoryCardView key={current.name} name={current.name} balance={current.balance}/>
-        );
+    if (props.categories !== null) {
+        for (const current in props.categories) {
+            categoriesComponents.push(
+                <CategoryCardView key={current} name={current} balance={props.categories[current]} />
+            );
+        }
     }
 
     return (
