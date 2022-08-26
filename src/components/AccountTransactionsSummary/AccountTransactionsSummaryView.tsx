@@ -1,5 +1,5 @@
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import AccountTransactionsItemView from "./AccountTransactionsItemView";
 import {AccountTransactionsSummaryProps} from "./AccountTransactionsSummaryProps";
 import TransactionHeaderButtons from "./TransactionHeaderButtons";
@@ -8,43 +8,33 @@ function AccountTransactionsSummaryView(props: AccountTransactionsSummaryProps) 
     const rowsBody = [];
 
     if (props.transactions !== null) {
-        for (const current of props.transactions) {
+        for (let i = 0;i < props.transactions.length;i++) {
+            const current = props.transactions[i];
+            const bottomBorder = i < props.transactions.length - 1;
+
             rowsBody.push(
                 <AccountTransactionsItemView key={current.id} id={current.id} amount={current.amount}
                                              category={current.category}
-                                             description={current.description} time={current.time}/>
+                                             description={current.description} time={current.time}
+                                             bottomBorder={bottomBorder}/>
             );
         }
     }
 
     return (
-        <Table striped bordered hover variant="dark">
-            <caption className="caption-top" style={{margin: "0", padding: "0"}}>
-               <TransactionHeaderButtons/>
-            </caption>
-            <thead>
-            <tr>
-                <th>
-                    Description
-                </th>
-                <th>
-                    Category
-                </th>
-                <th>
-                    Date
-                </th>
-                <th>
-                    Income
-                </th>
-                <th>
-                    Outcome
-                </th>
-            </tr>
-            </thead>
-            <tbody>
-            {rowsBody}
-            </tbody>
-        </Table>
+        <div className="firstBackgroundColor">
+            <TransactionHeaderButtons/>
+            <div style={{margin: "15px 0 15px 0"}}>
+                {rowsBody}
+            </div>
+            <Button
+                 style={{
+                     borderRadius: "0 0 10px 10px", width: "100%", backgroundColor: "#343434",
+                     color: "gray", border: "none"
+                 }}>
+                View next month...
+            </Button>
+        </div>
     );
 }
 

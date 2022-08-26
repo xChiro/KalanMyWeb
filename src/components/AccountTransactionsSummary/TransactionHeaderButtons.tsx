@@ -1,24 +1,21 @@
 import React from 'react';
+import {Button, ButtonGroup} from "react-bootstrap";
 
 function TransactionHeaderButtons() {
     return (
-        <div style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gridGap: "0",
-            textAlign: "center",
+        <ButtonGroup style={{
             width: "100%",
-            color: "white"
+            color: "white",
         }}>
-            <div className="bg-positive-value"
-                 style={{borderRadius: "10px 0 0 0",}}>
+            <Button
+                 style={{borderRadius: "10px 0 0 0", backgroundColor:"#30932C", border: "none"}}>
                 Add Income Transaction
-            </div>
-            <div className="bg-negative-value"
-                 style={{borderRadius: "0 10px 0 0",}}>
+            </Button>
+            <Button
+                 style={{borderRadius: "0 10px 0 0", backgroundColor:"#BA0E0E", border: "none"}}>
                 Add Outcome Transaction
-            </div>
-        </div>
+            </Button>
+        </ButtonGroup>
     );
 }
 

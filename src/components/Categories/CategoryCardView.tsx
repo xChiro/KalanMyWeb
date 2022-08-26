@@ -13,7 +13,7 @@ function CategoryCardView(props: CategoryCardViewProps) {
     return (
         <div className="d-inline-block" style={{maxWidth: "13rem", margin: "0 15px 0 15px"}}>
             <div>
-                <h3 className={balanceClassName} style={{fontWeight: "bold"}}>
+                <h3 className={balanceClassName}>
                     <CurrencyFormat value={props.balance}/>
                 </h3>
             </div>
