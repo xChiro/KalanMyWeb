@@ -1,16 +1,17 @@
 import React from "react";
 import {Card} from "react-bootstrap";
+import {DashboardItemProps} from "./DashboardItemProps";
 
-function DashboardItem(props: React.HTMLAttributes<HTMLElement>) {
+function DashboardItem(props: DashboardItemProps) {
     return (
-        <Card className={'dashboard-item'} style={props.style}>
-            <Card.Body className={'card-body'}>
-                <Card.Title style={{textAlign: "left", padding: "1vh 0 0 1vw", marginBottom: "2vh", fontSize: "1em"}}>
+        <div className={'dashboard-item dashboard-item-bottom' } style={props.containerStyle}>
+            <Card.Body>
+                <Card.Title className="dashboard-item-title" style={props.titleStyle}>
                     {props.title}
                 </Card.Title>
                 {props.children}
             </Card.Body>
-        </Card>
+        </div>
     );
 }
 

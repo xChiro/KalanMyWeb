@@ -1,4 +1,4 @@
-import TransactionModel from "../transactions/transaction.model";
+import TransactionDashboardModel from "./transactionDashboardModel";
 
 export default interface DashboardModel {
     accountId: string | null;
@@ -6,7 +6,7 @@ export default interface DashboardModel {
     accountBalance: number;
     monthlyIncomes: number;
     monthlyOutcomes: number;
-    accountTransactions: TransactionModel[] | null;
+    accountTransactions: TransactionDashboardModel[] | null;
     categoriesBalances: any;
     pending: boolean;
     success: boolean;

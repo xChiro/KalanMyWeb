@@ -1,8 +1,9 @@
-export interface AccountTransactionsItemProps {
+export default interface TransactionDashboardModel {
     id: string | undefined;
-    bottomBorder: boolean;
     amount: number | undefined;
     description: string | undefined;
     category: string | undefined;
     time: string | undefined;
+    pending: boolean | undefined,
+    success: boolean | undefined,
 }

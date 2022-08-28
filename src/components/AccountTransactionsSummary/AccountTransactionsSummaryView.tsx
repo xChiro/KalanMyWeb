@@ -8,7 +8,7 @@ function AccountTransactionsSummaryView(props: AccountTransactionsSummaryProps) 
     const rowsBody = [];
 
     if (props.transactions !== null) {
-        for (let i = 0;i < props.transactions.length;i++) {
+        for (let i = 0; i < props.transactions.length; i++) {
             const current = props.transactions[i];
             const bottomBorder = i < props.transactions.length - 1;
 
@@ -22,7 +22,7 @@ function AccountTransactionsSummaryView(props: AccountTransactionsSummaryProps) 
     }
 
     return (
-        <div className="firstBackgroundColor">
+        <div className="primary-background-color" style={{marginBottom: "10px"}}>
             <TransactionHeaderButtons/>
             <div style={{margin: "15px 0 15px 0"}}>
                 {rowsBody}
@@ -30,7 +30,7 @@ function AccountTransactionsSummaryView(props: AccountTransactionsSummaryProps) 
             <Button
                  style={{
                      borderRadius: "0 0 10px 10px", width: "100%", backgroundColor: "#343434",
-                     color: "gray", border: "none"
+                     color: "gray", border: "none", fontSize: ".8em"
                  }}>
                 View next month...
             </Button>

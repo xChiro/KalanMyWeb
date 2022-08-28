@@ -1,3 +1,3 @@
 export interface CurrencyFormantProps {
-    value: number | null;
+    value: number | undefined;
 }

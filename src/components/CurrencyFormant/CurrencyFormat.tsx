@@ -1,5 +1,5 @@
 import React from 'react';
-import {CurrencyFormantProps} from "./CurrencyFormant.props";
+import {CurrencyFormantProps} from "./CurrencyFormatProps";
 
 function CurrencyFormat(props: CurrencyFormantProps) {
     return (
