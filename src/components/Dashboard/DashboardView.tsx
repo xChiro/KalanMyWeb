@@ -28,7 +28,8 @@ function Dashboard() {
             <Container>
                 <Row>
                     <Col>
-                        <AccountTransactionsSummaryView transactions={dashboardModel.accountTransactions ?? []}
+                        <AccountTransactionsSummaryView accountId={dashboardModel.accountId ?? ""}
+                                                        transactions={dashboardModel.accountTransactions ?? []}
                                                         tableStyle={containerItemStyle}/>
                     </Col>
                     <Col>

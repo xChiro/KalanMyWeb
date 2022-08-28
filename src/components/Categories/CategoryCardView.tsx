@@ -1,5 +1,6 @@
 import React from 'react';
 import CurrencyFormat from "../CurrencyFormant/CurrencyFormat";
+import {capitalizeFirst} from "../../utilities/TextFormatters";
 
 interface CategoryCardViewProps extends React.HTMLAttributes<HTMLElement> {
     name: string,
@@ -13,12 +14,12 @@ function CategoryCardView(props: CategoryCardViewProps) {
     return (
         <div className="d-inline-block" style={{maxWidth: "13rem", margin: "0 15px 0 15px"}}>
             <div>
-                <h3 className={balanceClassName}>
+                <h4 className={balanceClassName}>
                     <CurrencyFormat value={props.balance}/>
-                </h3>
+                </h4>
             </div>
             <div>
-                <label>{props.name}</label>
+                <label style={{ fontSize: ".8em"}}>{capitalizeFirst(props.name)}</label>
             </div>
         </div>
     );

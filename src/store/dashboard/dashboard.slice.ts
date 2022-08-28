@@ -4,12 +4,12 @@ import { getDashboard } from "./dashboard.fetch";
 import {RootState} from "../store";
 
 const initialState: DashboardModel = {
-    accountId: null,
-    accountName: null,
+    accountId: undefined,
+    accountName: undefined,
     accountBalance: 0,
     monthlyIncomes: 0,
     monthlyOutcomes: 0,
-    accountTransactions: null,
+    accountTransactions: undefined,
     categoriesBalances: [],
     pending: true,
     success: false,

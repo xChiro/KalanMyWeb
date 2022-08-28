@@ -2,6 +2,7 @@ import TransactionDashboardModel from "../../store/dashboard/transactionDashboar
 import {CSSProperties} from "react";
 
 export interface AccountTransactionsSummaryProps {
+    accountId: string;
     transactions: TransactionDashboardModel[];
     tableStyle?: CSSProperties;
 }

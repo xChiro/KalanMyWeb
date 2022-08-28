@@ -1,5 +1,6 @@
 export interface TransactionFormProps {
     accountId: string;
+    onCloseModal: any;
     type: TransactionTypes;
 }
 

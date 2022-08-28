@@ -19,5 +19,9 @@ code {
 
 
 .primary-background-color {
-  background-color: #292929;
+  background-color: #292929 !important;
+}
+
+.secondary-background-color {
+  background-color: rgb(52, 52, 52) !important;
 }

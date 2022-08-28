@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Button, Table} from 'react-bootstrap';
 import AccountTransactionsItemView from "./AccountTransactionsItemView";
 import {AccountTransactionsSummaryProps} from "./AccountTransactionsSummaryProps";
 import TransactionHeaderButtons from "./TransactionHeaderButtons";
@@ -23,13 +23,13 @@ function AccountTransactionsSummaryView(props: AccountTransactionsSummaryProps) 
 
     return (
         <div className="primary-background-color" style={{marginBottom: "10px"}}>
-            <TransactionHeaderButtons/>
-            <div style={{margin: "15px 0 15px 0"}}>
+            <TransactionHeaderButtons accountId={props.accountId}/>
+            <div style={{margin: "15px 0 15px 0", color: "white"}}>
                 {rowsBody}
             </div>
-            <Button
+            <Button className="secondary-background-color"
                  style={{
-                     borderRadius: "0 0 10px 10px", width: "100%", backgroundColor: "#343434",
+                     borderRadius: "0 0 10px 10px", width: "100%",
                      color: "gray", border: "none", fontSize: ".8em"
                  }}>
                 View previous month...

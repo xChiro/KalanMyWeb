@@ -2,32 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardItemProps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TransactionForms/TransactionForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TransactionForms/TransactionFormProps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/dashboard/transactionDashboardModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/TransactionHeaderButtonsProps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utilities/TextFormatters.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsItemProps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsItemProps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsItemView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsItemView.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryProps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryProps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryView.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/TransactionHeaderButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/TransactionHeaderButtons.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CurrencyFormant/CurrencyFormant.props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrencyFormant/CurrencyFormatProps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories/CategoryCardView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories/CategoryCardView.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CurrencyFormant/CurrencyFormat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CurrencyFormant/CurrencyFormat.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardItems.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardItems.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TransactionForms/TransactionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TransactionForms/TransactionForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TransactionForms/TransactionFormProps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TransactionForms/TransactionFormProps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Accounts/TransactionService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Accounts/TransactionService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/dashboard/dashboard.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dashboard/dashboard.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/transactions/transaction.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/transactions/transaction.slice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/transactions/trasanction.fetch.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/dashboard/dashboard.slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dashboard/dashboard.slice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,31 +50,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/chiro/Documents/Projects/KalanMyWeb/src/components/AccountTransactionsSummary&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/chiro/Documents/Projects/KalanMyWeb/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "js.last.introduce.type": "CONST",
+    "last_opened_file_path": "/Users/chiro/Documents/Projects/KalanMyWeb/src/components/AccountTransactionsSummary",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/Users/chiro/Documents/Projects/KalanMyWeb/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/AccountTransactionsSummary" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/store/dashboard" />
       <recent name="$PROJECT_DIR$/src/components/AccountTransactionsSummary" />
       <recent name="$PROJECT_DIR$/src/store/transactions" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="run" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -101,7 +105,8 @@
       <workItem from="1661343223361" duration="6573000" />
       <workItem from="1661426811881" duration="7818000" />
       <workItem from="1661514429333" duration="6741000" />
-      <workItem from="1661647928797" duration="10722000" />
+      <workItem from="1661647928797" duration="10980000" />
+      <workItem from="1661688096299" duration="9969000" />
     </task>
     <servers />
   </component>
