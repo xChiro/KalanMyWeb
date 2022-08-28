@@ -32,7 +32,7 @@ function AccountTransactionsSummaryView(props: AccountTransactionsSummaryProps) 
                      borderRadius: "0 0 10px 10px", width: "100%", backgroundColor: "#343434",
                      color: "gray", border: "none", fontSize: ".8em"
                  }}>
-                View next month...
+                View previous month...
             </Button>
         </div>
     );
