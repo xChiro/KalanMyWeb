@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardView.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TransactionForms/TransactionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TransactionForms/TransactionForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Accounts/AccountService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Accounts/AccountService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Accounts/TransactionService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Accounts/TransactionService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/dashboard/dashboard.fetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dashboard/dashboard.fetch.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/dashboard/dashboard.slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dashboard/dashboard.slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "/Users/chiro/Documents/Projects/KalanMyWeb/src",
+    "last_opened_file_path": "/Users/chiro/Documents/Projects/KalanMyWeb",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,6 +57,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components/AccountTransactionsSummary" />
     </key>
@@ -103,7 +98,7 @@
       <workItem from="1661514429333" duration="6741000" />
       <workItem from="1661647928797" duration="10980000" />
       <workItem from="1661688096299" duration="10780000" />
-      <workItem from="1661777995460" duration="22115000" />
+      <workItem from="1661777995460" duration="23058000" />
     </task>
     <servers />
   </component>
