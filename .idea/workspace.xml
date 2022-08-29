@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.development" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/user/user.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/user/user.slice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardItems.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardItems.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardView.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TransactionForms/TransactionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TransactionForms/TransactionForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/configs/HostVariables.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/Accounts/AccountService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Accounts/AccountService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/Accounts/TransactionService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Accounts/TransactionService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/dashboard/dashboard.fetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dashboard/dashboard.fetch.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/dashboard/dashboard.slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dashboard/dashboard.slice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +103,7 @@
       <workItem from="1661514429333" duration="6741000" />
       <workItem from="1661647928797" duration="10980000" />
       <workItem from="1661688096299" duration="10780000" />
-      <workItem from="1661777995460" duration="12930000" />
+      <workItem from="1661777995460" duration="22115000" />
     </task>
     <servers />
   </component>

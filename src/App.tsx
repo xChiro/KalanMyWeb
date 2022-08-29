@@ -3,22 +3,11 @@ import TopNavBarView from "./components/TopNavBar/TopNavBarView";
 import Dashboard from "./components/Dashboard/DashboardView";
 import {useAuth0} from "@auth0/auth0-react";
 import {Button} from "react-bootstrap";
-import {useEffect, useState} from "react";
-import {useAppDispatch, useAppSelector} from "./store/hooks";
-import {userSlice} from "./store/user/user.slice";
 
 function App() {
-    const dispatch = useAppDispatch();
-    const { isAuthenticated, loginWithRedirect, getAccessTokenSilently } = useAuth0();
-    const body =  isAuthenticated ? <Dashboard/> : <Button onClick={() => loginWithRedirect()}>Log in</Button>;
+    const {isAuthenticated, loginWithRedirect, getIdTokenClaims} = useAuth0();
 
-    useEffect(() => {
-        (async () => {
-            const accessToken = await getAccessTokenSilently();
-            console.log(accessToken);
-            dispatch(userSlice.actions.setToken(accessToken));
-        })();
-    });
+    const body = isAuthenticated ? <Dashboard/> : <Button onClick={() => loginWithRedirect()}>Log in</Button>;
 
     return (
         <div className="App">

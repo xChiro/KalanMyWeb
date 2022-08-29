@@ -12,7 +12,7 @@ const initialState: DashboardModel = {
     accountTransactions: undefined,
     categoriesBalances: [],
     pending: true,
-    success: false,
+    success: false
 };
 
 export const dashboardSlice = createSlice({
@@ -34,6 +34,10 @@ export const dashboardSlice = createSlice({
             })
             .addCase(getDashboard.pending, (state, action) => {
                 state.pending = true;
+            })
+            .addCase(getDashboard.rejected, (state, action) => {
+                state.success = false;
+                state.pending = false;
             })
     }
 });
