@@ -3,14 +3,16 @@ import {Button, Form} from "react-bootstrap";
 import CurrencyInput from "react-currency-input-field";
 import {TransactionFormProps, TransactionTypes} from "./TransactionFormProps";
 import {postIncomeTransaction, postOutcomeTransaction} from "../../services/Accounts/TransactionService";
-import {useAppDispatch} from "../../store/hooks";
+import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {getDashboard} from "../../store/dashboard/dashboard.fetch";
+import {selectUser} from "../../store/user/user.slice";
 
 function TransactionForm(props: TransactionFormProps) {
     const [amount, setAmount] = useState("");
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("");
     const dispatch = useAppDispatch();
+    const userModel = useAppSelector(selectUser);
 
     const handlerSubmit = (e: any) => {
         e.preventDefault();
@@ -24,14 +26,14 @@ function TransactionForm(props: TransactionFormProps) {
 
         if (props.type === TransactionTypes.Income) {
             postIncomeTransaction(transactionData).then(value => {
-                    dispatch(getDashboard());
+                    dispatch(getDashboard(userModel.token));
                 },
                 error => {
                     alert(error);
                 });
         } else {
             postOutcomeTransaction(transactionData).then(value => {
-                    dispatch(getDashboard());
+                    dispatch(getDashboard(userModel.token));
                 },
                 error => {
                     alert(error);
@@ -77,7 +79,8 @@ function TransactionForm(props: TransactionFormProps) {
                     }}/>
             </Form.Group>
             <div style={{textAlign: "right"}}>
-                <Button variant="danger" type="button" style={{marginRight: "10px", backgroundColor: "#BA0E0E",  width: "9rem"}}
+                <Button variant="danger" type="button"
+                        style={{marginRight: "10px", backgroundColor: "#BA0E0E", width: "9rem"}}
                         onClick={() => props.onCloseModal()}>
                     Cancel
                 </Button>

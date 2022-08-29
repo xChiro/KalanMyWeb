@@ -6,10 +6,6 @@
   padding-bottom: 10px;
 }
 
-.dashboard-item-title {
-  border-radius: 10px 10px 0 0;
-}
-
 .dashboard-item-bottom {
   border-radius: 0 0 10px 10px;
 }
