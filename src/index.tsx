@@ -8,15 +8,21 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './components/Dashboard/DashboardItems.css';
 import {Provider} from "react-redux";
 import {store} from "./store/store";
+import {Auth0Provider} from "@auth0/auth0-react";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
     <React.StrictMode>
-        <Provider store={store}>
-            <App/>
-        </Provider>
+        <Auth0Provider
+            domain="dev-eagd56ww.us.auth0.com"
+            clientId="7U8D6tG9Kh5HXcu6nJMM5N0PheTvUW93"
+            redirectUri={window.location.origin}>
+            <Provider store={store}>
+                <App/>
+            </Provider>
+        </Auth0Provider>
     </React.StrictMode>
 );
 

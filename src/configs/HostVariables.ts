@@ -1,3 +1,3 @@
 export class HostVariables {
-    static baseApiURL: string = "http://localhost:7071/api"
+    static baseApiURL: string = process.env.BASE_API as string;
 }
