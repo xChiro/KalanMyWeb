@@ -2,11 +2,11 @@ import CategoryCardView from "./CategoryCardView";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-interface CategoriesPanelView extends React.HTMLAttributes<HTMLElement> {
+interface CategoriesPanelViewProps extends React.HTMLAttributes<HTMLElement> {
     categories: any;
 }
 
-function CategoriesPanelView(props: CategoriesPanelView) {
+function CategoriesPanelView(props: CategoriesPanelViewProps) {
 
     const categoriesComponents = [];
 

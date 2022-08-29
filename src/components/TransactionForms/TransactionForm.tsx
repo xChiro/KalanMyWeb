@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {Button, Form} from "react-bootstrap";
 import CurrencyInput from "react-currency-input-field";
 import {TransactionFormProps, TransactionTypes} from "./TransactionFormProps";
