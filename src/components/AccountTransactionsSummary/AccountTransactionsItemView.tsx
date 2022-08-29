@@ -1,7 +1,6 @@
 import React from 'react';
 import {AccountTransactionsItemProps} from "./AccountTransactionsItemProps";
 import CurrencyFormat from "../CurrencyFormant/CurrencyFormat";
-import {Col, Row, Table} from "react-bootstrap";
 import {capitalizeFirst} from "../../utilities/TextFormatters";
 
 function AccountTransactionsItemView(props: AccountTransactionsItemProps) {

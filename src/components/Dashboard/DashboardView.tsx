@@ -37,11 +37,11 @@ function Dashboard() {
                 dispatch(getDashboard(accessToken?.__raw as string));
             }
         })();
-    }, [dispatch]);
+    }, [getIdTokenClaims, isAuthenticated, dispatch]);
 
     if (dashboardModel.accountId === undefined && !dashboardModel.pending && userModel.token !== "") {
         postOpenAccount(null, userModel.token).then(
-            value => {
+            () => {
                 dispatch(getDashboard(userModel.token));
             }
         )

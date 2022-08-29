@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Table} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import AccountTransactionsItemView from "./AccountTransactionsItemView";
 import {AccountTransactionsSummaryProps} from "./AccountTransactionsSummaryProps";
 import TransactionHeaderButtons from "./TransactionHeaderButtons";

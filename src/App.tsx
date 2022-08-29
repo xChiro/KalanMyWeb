@@ -5,7 +5,7 @@ import {useAuth0} from "@auth0/auth0-react";
 import {Button} from "react-bootstrap";
 
 function App() {
-    const {isAuthenticated, loginWithRedirect, getIdTokenClaims} = useAuth0();
+    const {isAuthenticated, loginWithRedirect} = useAuth0();
 
     const body = isAuthenticated ? <Dashboard/> : <Button onClick={() => loginWithRedirect()}>Log in</Button>;
 
