@@ -4,7 +4,7 @@ import {DashboardItemProps} from "./DashboardItemProps";
 
 function DashboardItem(props: DashboardItemProps) {
     return (
-        <div className={'dashboard-item dashboard-item-bottom' } style={props.containerStyle}>
+        <div className={'dashboard-item dashboard-items-bottom' } style={props.containerStyle}>
             <Card.Body>
                 <Card.Title className="dashboard-item-title" style={props.titleStyle}>
                     {props.title}

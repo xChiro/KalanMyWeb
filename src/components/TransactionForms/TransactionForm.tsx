@@ -26,19 +26,24 @@ function TransactionForm(props: TransactionFormProps) {
 
         if (props.type === TransactionTypes.Income) {
             postIncomeTransaction(transactionData, userModel.token).then(value => {
-                    dispatch(getDashboard(userModel.token));
+                    refreshData(userModel.token);
                 },
                 error => {
                     alert(error);
                 });
         } else {
             postOutcomeTransaction(transactionData, userModel.token).then(value => {
-                    dispatch(getDashboard(userModel.token));
+                    refreshData(userModel.token);
                 },
                 error => {
                     alert(error);
                 });
         }
+    }
+
+    const refreshData = (token: string) => {
+        dispatch(getDashboard(token));
+        props.onCloseModal();
     }
 
     return (
