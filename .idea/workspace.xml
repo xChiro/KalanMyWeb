@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +97,7 @@
       <workItem from="1661688096299" duration="10780000" />
       <workItem from="1661777995460" duration="24961000" />
       <workItem from="1661858516221" duration="3047000" />
-      <workItem from="1661947173657" duration="1936000" />
+      <workItem from="1661947173657" duration="2237000" />
     </task>
     <servers />
   </component>
