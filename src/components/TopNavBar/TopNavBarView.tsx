@@ -4,7 +4,7 @@ import {useAuth0} from "@auth0/auth0-react";
 import {Button} from "react-bootstrap";
 
 function TopNavBarView() {
-    const { logout, user } = useAuth0();
+    const {logout, user} = useAuth0();
 
     return (
         <div className="container-fluid" style={{
@@ -14,18 +14,17 @@ function TopNavBarView() {
             padding: ".3em 10vw 0px"
         }}>
             <div className="row">
-                <div className="col" style={{height: "100%", textAlign: "left"}}>
-                    <div style={{display: "inline-block"}}>
-                        <span style={{fontSize: "1.6em"}}>
-                            Kalan My Money
-                        </span>
-                    </div>
+                <div className="col" style={{textAlign: "left"}}>
+                    <span style={{fontSize: "1em"}}>
+                        Kalan My Money
+                    </span>
                 </div>
                 <div className="col" style={{textAlign: "right"}}>
-                    <span style={{marginRight: "10px"}}>{user?.name}</span>
-                    <Button className="btn-danger" style={{border: "none"}} onClick={() => logout({ returnTo: window.location.origin })}>
+                    <span style={{marginRight: "10px"}}>Welcome</span>
+                    <Button className="btn-danger" style={{border: "none"}}
+                            onClick={() => logout({returnTo: window.location.origin})}>
                         <FontAwesomeIcon icon={faSignOut} style={{
-                            height: "1em"
+                            fontSize: "1em"
                         }}/>
                     </Button>
                 </div>
