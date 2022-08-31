@@ -1,7 +1,10 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faSignOut} from "@fortawesome/free-solid-svg-icons";
+import {useAuth0} from "@auth0/auth0-react";
+import {Button} from "react-bootstrap";
 
 function TopNavBarView() {
+    const { logout, user } = useAuth0();
 
     return (
         <div className="container-fluid" style={{
@@ -14,15 +17,17 @@ function TopNavBarView() {
                 <div className="col" style={{height: "100%", textAlign: "left"}}>
                     <div style={{display: "inline-block"}}>
                         <span style={{fontSize: "1.6em"}}>
-                            <FontAwesomeIcon icon={faBars} style={{margin: "5px 10px 0 0"}}/>
                             Kalan My Money
                         </span>
                     </div>
                 </div>
-                <div className="col-1" style={{textAlign: "right"}}>
-                    <FontAwesomeIcon icon={faUser} style={{
-                        height: "2em"
-                    }}/>
+                <div className="col" style={{textAlign: "right"}}>
+                    <span style={{marginRight: "10px"}}>{user?.name}</span>
+                    <Button className="btn-danger" style={{border: "none"}} onClick={() => logout({ returnTo: window.location.origin })}>
+                        <FontAwesomeIcon icon={faSignOut} style={{
+                            height: "1em"
+                        }}/>
+                    </Button>
                 </div>
             </div>
         </div>
