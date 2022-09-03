@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="" />
+    <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/TransactionHeaderButtons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/TransactionHeaderButtons.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories/CategoriesPanelView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories/CategoriesPanelView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardItems.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardItems.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dashboard/DashboardView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dashboard/DashboardView.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,6 +105,11 @@
       <workItem from="1661777995460" duration="24961000" />
       <workItem from="1661858516221" duration="3047000" />
       <workItem from="1661947173657" duration="2237000" />
+      <workItem from="1661951347327" duration="1155000" />
+      <workItem from="1661995978395" duration="1321000" />
+      <workItem from="1662064847095" duration="1196000" />
+      <workItem from="1662119263261" duration="5390000" />
+      <workItem from="1662205019653" duration="3073000" />
     </task>
     <servers />
   </component>

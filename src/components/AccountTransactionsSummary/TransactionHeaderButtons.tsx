@@ -25,16 +25,15 @@ function TransactionHeaderButtons(props: TransactionHeaderButtonsProps) {
                 <Button
                     style={{borderRadius: "10px 0 0 0", backgroundColor: "#BA0E0E", border: "none"}}
                         onClick={() => showTypeModal(TransactionTypes.Outcome)}>
-                    <span>Add Outcome Transaction</span>
+                    <span style={{fontSize: "1rem"}}>Outcome Transaction</span>
                 </Button>
                 <Button
                     style={{borderRadius: "0 10px 0 0", backgroundColor: "#30932C", border: "none"}}
                     onClick={() => showTypeModal(TransactionTypes.Income)}
                 >
-                    <span>Add Income Transaction</span>
+                    <span style={{fontSize: "1rem"}}>Income Transaction</span>
                 </Button>
             </ButtonGroup>
-
             <Modal
                 show={showModal}
                 onHide={onClose}

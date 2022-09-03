@@ -13,7 +13,7 @@ function CategoriesPanelView(props: CategoriesPanelViewProps) {
     if (props.categories !== null) {
         for (const current in props.categories) {
             categoriesComponents.push(
-                <CategoryCardView key={current} name={current} balance={props.categories[current]} />
+                <CategoryCardView    key={current} name={current} balance={props.categories[current]} />
             );
         }
     }
@@ -21,7 +21,7 @@ function CategoriesPanelView(props: CategoriesPanelViewProps) {
     return (
         <Container>
             <Row>
-                <Col>
+                <Col style={{maxHeight: "35vh", overflow: "auto"}}>
                     {categoriesComponents}
                 </Col>
             </Row>

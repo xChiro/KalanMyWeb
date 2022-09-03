@@ -16,7 +16,10 @@ function Dashboard() {
     const {isAuthenticated, getIdTokenClaims} = useAuth0();
     const dashboardModel = useAppSelector(selectDashboard);
     const userModel = useAppSelector(selectUser);
-    const containerItemStyle = {backgroundColor: "#292929", margin: "0px 0 10px 0"};
+    const containerItemStyle = {
+        backgroundColor: "#292929",
+        margin: "0px 0 10px 0"
+    };
     const titleItemStyle: CSSProperties = {
         textAlign: "left",
         backgroundColor: "rgb(52, 52, 52)",
