@@ -20,6 +20,7 @@ function Dashboard() {
         backgroundColor: "#292929",
         margin: "0px 0 10px 0"
     };
+
     const titleItemStyle: CSSProperties = {
         textAlign: "left",
         backgroundColor: "rgb(52, 52, 52)",
@@ -56,18 +57,19 @@ function Dashboard() {
                 <Col>
                     <AccountTransactionsSummaryView accountId={dashboardModel.accountId ?? ""}
                                                     transactions={dashboardModel.accountTransactions ?? []}
-                                                    tableStyle={containerItemStyle}/>
+                                                    tableStyle={containerItemStyle}
+                                                    pending={dashboardModel.pending}/>
                 </Col>
                 <Col>
                     <DashboardItem title="Actual Balance" containerStyle={containerItemStyle}
-                                   titleStyle={titleItemStyle}>
+                                   titleStyle={titleItemStyle} pending={dashboardModel.pending}>
                         <AccountBalanceView accountBalance={dashboardModel.accountBalance}
                                             monthlyIncomes={dashboardModel.monthlyIncomes}
                                             monthlyOutcomes={dashboardModel.monthlyOutcomes}
                                             subTitlesFontSize={12}/>
                     </DashboardItem>
                     <DashboardItem title="Categories Monthly Balance" containerStyle={containerItemStyle}
-                                   titleStyle={titleItemStyle}>
+                                   titleStyle={titleItemStyle} pending={dashboardModel.pending}>
                         <CategoriesPanelView categories={dashboardModel.categoriesBalances}/>
                     </DashboardItem>
                 </Col>

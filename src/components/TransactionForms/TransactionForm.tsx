@@ -11,12 +11,13 @@ function TransactionForm(props: TransactionFormProps) {
     const [amount, setAmount] = useState("");
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("");
+    const [disabledButtons, setDisabledButtons] = useState(false);
     const dispatch = useAppDispatch();
     const userModel = useAppSelector(selectUser);
 
     const handlerSubmit = (e: any) => {
         e.preventDefault();
-
+        setDisabledButtons(true);
         const transactionData = {
             accountId: props.accountId,
             amount: Number(amount),
@@ -86,10 +87,11 @@ function TransactionForm(props: TransactionFormProps) {
             <div style={{textAlign: "right"}}>
                 <Button variant="danger" type="button"
                         style={{marginRight: "10px", backgroundColor: "#BA0E0E", width: "9rem"}}
-                        onClick={() => props.onCloseModal()}>
+                        onClick={() => props.onCloseModal()} disabled={disabledButtons}>
                     Cancel
                 </Button>
-                <Button variant="primary" type="submit" style={{width: "9rem", backgroundColor: "#30932C"}}>
+                <Button variant="primary" type="submit" style={{width: "9rem", backgroundColor: "#30932C"}}
+                        disabled={disabledButtons}>
                     Add Transaction
                 </Button>
             </div>

@@ -25,7 +25,7 @@ function AccountTransactionsSummaryView(props: AccountTransactionsSummaryProps) 
         <div className="primary-background-color" style={{marginBottom: "10px", maxHeight: "90vh"}}>
             <TransactionHeaderButtons accountId={props.accountId}/>
             <div style={{margin: "15px 0 15px 0", color: "white", maxHeight: "75vh", overflow: "auto"}}>
-                {rowsBody}
+                {props.pending ? "Loading..." : rowsBody}
             </div>
             <Button className="secondary-background-color"
                  style={{

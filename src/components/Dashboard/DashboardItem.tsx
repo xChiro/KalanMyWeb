@@ -9,7 +9,8 @@ function DashboardItem(props: DashboardItemProps) {
                 <Card.Title className="dashboard-item-title" style={props.titleStyle}>
                     {props.title}
                 </Card.Title>
-                {props.children}
+                {props.pending ? "Loading..."
+                : props.children }
             </Card.Body>
         </div>
     );

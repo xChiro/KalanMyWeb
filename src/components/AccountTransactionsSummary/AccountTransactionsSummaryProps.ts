@@ -5,4 +5,5 @@ export interface AccountTransactionsSummaryProps {
     accountId: string;
     transactions: TransactionDashboardModel[];
     tableStyle?: CSSProperties;
+    pending: boolean;
 }
