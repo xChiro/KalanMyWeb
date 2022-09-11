@@ -5,7 +5,7 @@ import AccountBalanceView from "../AccountBalance/AccountBalanceView";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {Col, Container, Row} from "react-bootstrap";
 import AccountTransactionsSummaryView from "../AccountTransactionsSummary/AccountTransactionsSummaryView";
-import {CSSProperties, useEffect} from "react";
+import {useEffect} from "react";
 import {selectUser, userSlice} from "../../store/user/user.slice";
 import {getDashboard} from "../../store/dashboard/dashboard.fetch";
 import {useAuth0} from "@auth0/auth0-react";
@@ -19,17 +19,6 @@ function Dashboard() {
     const containerItemStyle = {
         backgroundColor: "#292929",
         margin: "0px 0 10px 0"
-    };
-
-    const titleItemStyle: CSSProperties = {
-        textAlign: "left",
-        backgroundColor: "rgb(52, 52, 52)",
-        width: "100%",
-        height: "30px",
-        margin: "0 0 10px 0",
-        padding: "7px 0 0 5px",
-        fontSize: ".8em",
-        color: "gray",
     };
 
     useEffect(() => {
@@ -62,14 +51,14 @@ function Dashboard() {
                 </Col>
                 <Col>
                     <DashboardItem title="Actual Balance" containerStyle={containerItemStyle}
-                                   titleStyle={titleItemStyle} pending={dashboardModel.pending}>
+                                   pending={dashboardModel.pending}>
                         <AccountBalanceView accountBalance={dashboardModel.accountBalance}
                                             monthlyIncomes={dashboardModel.monthlyIncomes}
                                             monthlyOutcomes={dashboardModel.monthlyOutcomes}
                                             subTitlesFontSize={12}/>
                     </DashboardItem>
                     <DashboardItem title="Categories Monthly Balance" containerStyle={containerItemStyle}
-                                   titleStyle={titleItemStyle} pending={dashboardModel.pending}>
+                                   pending={dashboardModel.pending}>
                         <CategoriesPanelView categories={dashboardModel.categoriesBalances}/>
                     </DashboardItem>
                 </Col>

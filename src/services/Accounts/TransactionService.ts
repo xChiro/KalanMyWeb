@@ -30,3 +30,19 @@ export async function postOutcomeTransaction(transaction: TransactionRequest, to
 
     return await response.json();
 }
+
+export async function getTransactionsMonthly(accountId: string, year: number, month: number, token: string,
+                                             category: string | undefined) {
+    const url = category ? `/accounts/transactions?accountId=${accountId}&year=${year}&month=${month}&category=${category}`
+        : `/accounts/transactions?accountId=${accountId}&year=${year}&month=${month}`;
+
+    const response = await fetch(process.env.REACT_APP_BASE_API + url, {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+        },
+    });
+
+    return await response.json();
+}
