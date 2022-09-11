@@ -97,6 +97,6 @@ function TransactionForm(props: TransactionFormProps) {
             </div>
         </Form>
     );
-};
+}
 
 export default TransactionForm;

@@ -13,7 +13,7 @@ function TopNavBarView() {
             marginBottom: "5px",
             padding: ".3em 10vw 0px"
         }}>
-            <div className="row">
+            <div className="row" style={{maxWidth: "80vw", margin: "0 auto"}}>
                 <div className="col" style={{textAlign: "left"}}>
                     <span style={{fontSize: "1em"}}>
                         Kalan My Money

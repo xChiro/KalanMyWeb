@@ -18,7 +18,10 @@ function Dashboard() {
     const userModel = useAppSelector(selectUser);
     const containerItemStyle = {
         backgroundColor: "#292929",
-        margin: "0px 0 10px 0"
+        margin: "0px 0 10px 0",
+        minWidth: "200px",
+        minHeight: "100px",
+        maxHeight: "40vh"
     };
 
     useEffect(() => {
@@ -41,14 +44,8 @@ function Dashboard() {
     }
 
     return (
-        <Container>
+        <Container style={{maxWidth: "80vw"}}>
             <Row>
-                <Col>
-                    <AccountTransactionsSummaryView accountId={dashboardModel.accountId ?? ""}
-                                                    transactions={dashboardModel.accountTransactions ?? []}
-                                                    tableStyle={containerItemStyle}
-                                                    pending={dashboardModel.pending}/>
-                </Col>
                 <Col>
                     <DashboardItem title="Actual Balance" containerStyle={containerItemStyle}
                                    pending={dashboardModel.pending}>
@@ -57,6 +54,16 @@ function Dashboard() {
                                             monthlyOutcomes={dashboardModel.monthlyOutcomes}
                                             subTitlesFontSize={12}/>
                     </DashboardItem>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <AccountTransactionsSummaryView accountId={dashboardModel.accountId ?? ""}
+                                                    transactions={dashboardModel.accountTransactions ?? []}
+                                                    tableStyle={containerItemStyle}
+                                                    pending={dashboardModel.pending}/>
+                </Col>
+                <Col>
                     <DashboardItem title="Categories Monthly Balance" containerStyle={containerItemStyle}
                                    pending={dashboardModel.pending}>
                         <CategoriesPanelView categories={dashboardModel.categoriesBalances}/>

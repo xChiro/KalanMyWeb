@@ -6,7 +6,7 @@ function DashboardItem(props: DashboardItemProps) {
     return (
         <div className={'dashboard-item dashboard-items-bottom' } style={props.containerStyle}>
             <Card.Body>
-                <Card.Title className="card-title">
+                <Card.Title className="dashboard-title">
                     {props.title}
                 </Card.Title>
                 {props.pending ? "Loading..."

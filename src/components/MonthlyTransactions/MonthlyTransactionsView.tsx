@@ -4,17 +4,11 @@ import {useAppSelector} from "../../store/hooks";
 import {selectUser} from "../../store/user/user.slice";
 import AccountTransactionsItemView from "../AccountTransactionsSummary/AccountTransactionsItemView";
 import {
-    getTransactionsMonthly,
-    postIncomeTransaction,
-    postOutcomeTransaction
+    getTransactionsMonthly
 } from "../../services/Accounts/TransactionService";
-import {Button, Form} from "react-bootstrap";
+import {Form} from "react-bootstrap";
 import DashboardItem from "../Dashboard/DashboardItem";
 import {toMonthName} from "../../utilities/TextFormatters";
-import CurrencyInput from "react-currency-input-field";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faMagnifyingGlass, faSignOut} from "@fortawesome/free-solid-svg-icons";
-import {TransactionTypes} from "../TransactionForms/TransactionFormProps";
 
 function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
     const userModel = useAppSelector(selectUser);
@@ -71,7 +65,7 @@ function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
     }
 
     useEffect(() => {
-        if (undefined != props.accountId) {
+        if (props.accountId) {
             setPending(true);
             getTransactionsMonthly(props.accountId, filters.year,
                 filters.month + 1, userModel.token, undefined).then(
@@ -86,7 +80,7 @@ function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
             );
         }
 
-    }, [filters, props.accountId]);
+    }, [filters, props.accountId, userModel.token]);
 
     const onChange = (event: any) => {
         const value = Number(event.target.value);
