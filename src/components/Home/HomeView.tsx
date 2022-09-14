@@ -28,6 +28,7 @@ function HomeView() {
                 navigate("./dashboard");
             }
         },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         [dashboardModel.accountId]);
 
     useEffect(() => {
