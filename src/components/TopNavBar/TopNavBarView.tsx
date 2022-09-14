@@ -31,7 +31,6 @@ function TopNavBarView() {
                     </span>
                 </div>
                 <div className="col" style={{textAlign: "right"}}>
-                    <span style={{marginRight: "10px"}}>Welcome</span>
                     {isAuthenticated ? logOutButton : loginButton}
                 </div>
             </div>

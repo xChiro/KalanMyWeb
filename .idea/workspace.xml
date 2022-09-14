@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -118,7 +123,7 @@
       <workItem from="1662984353073" duration="2481000" />
       <workItem from="1663072057189" duration="497000" />
       <workItem from="1663073829776" duration="9750000" />
-      <workItem from="1663122169303" duration="3776000" />
+      <workItem from="1663122169303" duration="4723000" />
     </task>
     <servers />
   </component>
