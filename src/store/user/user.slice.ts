@@ -7,7 +7,7 @@ const initialState: UserModel =  {
 }
 
 export const userSlice = createSlice({
-        name: "user",
+        name: "token",
         initialState,
         reducers: {
             setToken(state, action) {
@@ -16,4 +16,4 @@ export const userSlice = createSlice({
         }
     });
 
-export const selectUser = (state: RootState) => state.user;
+export const selectToken = (state: RootState) => state.token;

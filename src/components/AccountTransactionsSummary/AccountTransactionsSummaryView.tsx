@@ -3,9 +3,13 @@ import {Button} from 'react-bootstrap';
 import AccountTransactionsItemView from "./AccountTransactionsItemView";
 import {AccountTransactionsSummaryProps} from "./AccountTransactionsSummaryProps";
 import TransactionHeaderButtons from "./TransactionHeaderButtons";
+import {useNavigate} from "react-router-dom";
 
 function AccountTransactionsSummaryView(props: AccountTransactionsSummaryProps) {
     const rowsBody = [];
+    const navigate = useNavigate();
+
+    const onViewPreviousMonthClick = () => navigate("../transactions", { replace: true });
 
     if (props.transactions !== null) {
         for (let i = 0; i < props.transactions.length; i++) {
@@ -27,7 +31,7 @@ function AccountTransactionsSummaryView(props: AccountTransactionsSummaryProps) 
             <div style={{margin: "15px 0 15px 0", color: "white", maxHeight: "65vh", overflow: "auto"}}>
                 {props.pending ? "Loading..." : rowsBody}
             </div>
-            <Button className="secondary-background-color"
+            <Button className="secondary-background-color" onClick={() => onViewPreviousMonthClick()}
                  style={{
                      borderRadius: "0 0 10px 10px", width: "100%",
                      color: "gray", border: "none", fontSize: ".8em"

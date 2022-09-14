@@ -5,7 +5,7 @@ import {TransactionFormProps, TransactionTypes} from "./TransactionFormProps";
 import {postIncomeTransaction, postOutcomeTransaction} from "../../services/Accounts/TransactionService";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {getDashboard} from "../../store/dashboard/dashboard.fetch";
-import {selectUser} from "../../store/user/user.slice";
+import {selectToken} from "../../store/user/user.slice";
 
 function TransactionForm(props: TransactionFormProps) {
     const [amount, setAmount] = useState("");
@@ -13,7 +13,7 @@ function TransactionForm(props: TransactionFormProps) {
     const [category, setCategory] = useState("");
     const [disabledButtons, setDisabledButtons] = useState(false);
     const dispatch = useAppDispatch();
-    const userModel = useAppSelector(selectUser);
+    const userModel = useAppSelector(selectToken);
 
     const handlerSubmit = (e: any) => {
         e.preventDefault();

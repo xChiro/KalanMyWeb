@@ -5,7 +5,7 @@ import {userSlice} from "./user/user.slice";
 export const store = configureStore({
         reducer: {
             dashboard: dashboardSlice.reducer,
-            user: userSlice.reducer
+            token: userSlice.reducer
         }
     });
 

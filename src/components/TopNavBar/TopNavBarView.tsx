@@ -2,9 +2,20 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSignOut} from "@fortawesome/free-solid-svg-icons";
 import {useAuth0} from "@auth0/auth0-react";
 import {Button} from "react-bootstrap";
+import React from "react";
 
 function TopNavBarView() {
-    const {logout} = useAuth0();
+    const {logout, isAuthenticated, loginWithRedirect} = useAuth0();
+
+    const logOutButton =
+        <Button className="btn-danger" style={{border: "none"}}
+                onClick={() => logout({returnTo: window.location.origin})}>
+            <FontAwesomeIcon icon={faSignOut} style={{
+                fontSize: "1em"
+            }}/>
+        </Button>;
+
+    const loginButton = <Button onClick={() => loginWithRedirect()}>Log in</Button>;
 
     return (
         <div className="container-fluid" style={{
@@ -21,12 +32,7 @@ function TopNavBarView() {
                 </div>
                 <div className="col" style={{textAlign: "right"}}>
                     <span style={{marginRight: "10px"}}>Welcome</span>
-                    <Button className="btn-danger" style={{border: "none"}}
-                            onClick={() => logout({returnTo: window.location.origin})}>
-                        <FontAwesomeIcon icon={faSignOut} style={{
-                            fontSize: "1em"
-                        }}/>
-                    </Button>
+                    {isAuthenticated ? logOutButton : loginButton}
                 </div>
             </div>
         </div>
