@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryView.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +123,8 @@
       <workItem from="1662984353073" duration="2481000" />
       <workItem from="1663072057189" duration="497000" />
       <workItem from="1663073829776" duration="9750000" />
-      <workItem from="1663122169303" duration="4723000" />
+      <workItem from="1663122169303" duration="4756000" />
+      <workItem from="1663590797288" duration="3121000" />
     </task>
     <servers />
   </component>
@@ -160,7 +161,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MonthlyTransactions/MonthlyTransactionsView.tsx</url>
           <line>73</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
