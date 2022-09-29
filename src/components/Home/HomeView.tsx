@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {selectToken, userSlice} from "../../store/user/user.slice";
 import {getDashboard} from "../../store/dashboard/dashboard.fetch";
-import {postOpenAccount} from "../../services/Accounts/AccountService";
+import {postOpenAccount} from "../../services/AccountService";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {useAuth0} from "@auth0/auth0-react";
 import {selectDashboard} from "../../store/dashboard/dashboard.slice";

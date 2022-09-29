@@ -5,12 +5,13 @@ import {selectToken} from "../../store/user/user.slice";
 import AccountTransactionsItemView from "../AccountTransactionsSummary/AccountTransactionsItemView";
 import {
     getTransactionsMonthly
-} from "../../services/Accounts/TransactionService";
+} from "../../services/TransactionService";
 import {Button, Form} from "react-bootstrap";
 import DashboardItem from "../Dashboard/DashboardItem";
 import {toMonthName} from "../../utilities/TextFormatters";
 import {selectDashboard} from "../../store/dashboard/dashboard.slice";
 import {useNavigate} from "react-router-dom";
+import CategoriesSelectView from "../CategoriesSelect/CategoriesSelectView";
 
 function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
     const tokenModel = useAppSelector(selectToken);
@@ -130,6 +131,14 @@ function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
                                 onChange={onChange}>
                                 {getYearsOptions()}
                             </Form.Select>
+                        </div>
+                    </div>
+                    <div style={{display: "inline-block"}}>
+                        <div style={{display: "inline-block", margin: "0 10px 0 20px"}}>
+                            <Form.Label>Category: </Form.Label>
+                        </div>
+                        <div style={{display: "inline-block", marginRight: "10px"}}>
+                           <CategoriesSelectView accountId={dashboardModel.accountId} className={"form-control"} />
                         </div>
                     </div>
                 </div>
