@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/CategoriesSelect/CategoriesSelectProps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CategoriesSelect/CategoriesSelectView.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/CategoriesService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AccountTransactionsSummary/AccountTransactionsSummaryView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MonthlyTransactions/MonthlyTransactionsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MonthlyTransactions/MonthlyTransactionsView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TransactionForms/TransactionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TransactionForms/TransactionForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Accounts/AccountService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/AccountService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Accounts/TransactionService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/TransactionService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/dashboard/dashboard.fetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/dashboard/dashboard.fetch.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +23,8 @@
       <list>
         <option value="CSS File" />
         <option value="tsconfig.json" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -67,11 +75,11 @@
       <recent name="$PROJECT_DIR$/src/components/AccountTransactionsSummary" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/services" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/store/dashboard" />
       <recent name="$PROJECT_DIR$/src/components/AccountTransactionsSummary" />
-      <recent name="$PROJECT_DIR$/src/store/transactions" />
     </key>
   </component>
   <component name="RunManager">
@@ -125,6 +133,11 @@
       <workItem from="1663073829776" duration="9750000" />
       <workItem from="1663122169303" duration="4756000" />
       <workItem from="1663590797288" duration="3121000" />
+      <workItem from="1663938019191" duration="8000" />
+      <workItem from="1664133385879" duration="628000" />
+      <workItem from="1664280252300" duration="600000" />
+      <workItem from="1664370422665" duration="953000" />
+      <workItem from="1664455289772" duration="4978000" />
     </task>
     <servers />
   </component>
@@ -150,18 +163,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MonthlyTransactions/MonthlyTransactionsView.tsx</url>
-          <line>52</line>
+          <line>53</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MonthlyTransactions/MonthlyTransactionsView.tsx</url>
-          <line>20</line>
+          <line>21</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MonthlyTransactions/MonthlyTransactionsView.tsx</url>
-          <line>73</line>
+          <line>74</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/MonthlyTransactions/MonthlyTransactionsView.tsx</url>
+          <line>117</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

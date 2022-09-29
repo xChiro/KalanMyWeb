@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 import {Button, Form} from "react-bootstrap";
 import CurrencyInput from "react-currency-input-field";
 import {TransactionFormProps, TransactionTypes} from "./TransactionFormProps";
-import {postIncomeTransaction, postOutcomeTransaction} from "../../services/Accounts/TransactionService";
+import {postIncomeTransaction, postOutcomeTransaction} from "../../services/TransactionService";
 import {useAppDispatch, useAppSelector} from "../../store/hooks";
 import {getDashboard} from "../../store/dashboard/dashboard.fetch";
 import {selectToken} from "../../store/user/user.slice";
+import CategoriesSelectView from "../CategoriesSelect/CategoriesSelectView";
 
 function TransactionForm(props: TransactionFormProps) {
     const [amount, setAmount] = useState("");
@@ -30,14 +31,16 @@ function TransactionForm(props: TransactionFormProps) {
                     refreshData(userModel.token);
                 },
                 error => {
-                    alert(error);
+                    setDisabledButtons(false);
+                    alert("Invalid input data");
                 });
         } else {
             postOutcomeTransaction(transactionData, userModel.token).then(value => {
                     refreshData(userModel.token);
                 },
                 error => {
-                    alert(error);
+                    setDisabledButtons(false);
+                    alert("Invalid input data");
                 });
         }
     }
@@ -75,14 +78,7 @@ function TransactionForm(props: TransactionFormProps) {
             </Form.Group>
             <Form.Group className="mb-3" controlId="category">
                 <Form.Label>Category</Form.Label>
-                <Form.Control
-                    name="category"
-                    type="text"
-                    placeholder="Category"
-                    value={category}
-                    onChange={e => {
-                        setCategory(e.target.value)
-                    }}/>
+                <CategoriesSelectView accountId={props.accountId} handleClick={setCategory} className="form-control" ></CategoriesSelectView>
             </Form.Group>
             <div style={{textAlign: "right"}}>
                 <Button variant="danger" type="button"
