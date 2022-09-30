@@ -5,7 +5,7 @@ import {selectToken} from "../../store/user/user.slice";
 import {getCategoriesByAccount} from "../../services/CategoriesService";
 
 function CategoriesSelectView(props: CategoriesSelectProps) {
-    const [category, setCategory] = useState("");
+    const [category, setCategory] = useState(props.value ?? "");
     const tokenModel = useAppSelector(selectToken);
     const [categories, setCategories] = useState([]);
     const categoriesOptions: any[] = [];
@@ -31,7 +31,7 @@ function CategoriesSelectView(props: CategoriesSelectProps) {
             <input className={props.className} type="text" list="categories" placeholder="Category" style={props.style} value={category}
                    onChange={(event) => {
                        setCategory(event.target.value);
-                       props.handleClick(event.target.value);
+                       props.onChange(event.target.value);
                    }}/>
             <datalist id="categories">
                 {categoriesOptions}

@@ -12,20 +12,16 @@ import {toMonthName} from "../../utilities/TextFormatters";
 import {selectDashboard} from "../../store/dashboard/dashboard.slice";
 import {useNavigate} from "react-router-dom";
 import CategoriesSelectView from "../CategoriesSelect/CategoriesSelectView";
+import dashboardView from "../Dashboard/DashboardView";
+import DashboardModel from "../../store/dashboard/dashboard.model";
 
 function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
     const tokenModel = useAppSelector(selectToken);
     const dashboardModel = useAppSelector(selectDashboard);
-    const currentDate = new Date();
     const navigate = useNavigate();
 
-    const [filters, setFilters] = useState({
-        month: props.initMonth ?? (currentDate.getMonth()),
-        year: props.initYear ?? currentDate.getFullYear()
-    });
-
+    const currentDate = new Date();
     const [transactions, setTransactions] = useState(Array<any>);
-    const [pending, setPending] = useState(true);
 
     const containerItemStyle = {
         backgroundColor: "#292929",
@@ -35,60 +31,70 @@ function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
     };
 
     const getTransactions = () => {
-        const rowsBody = [];
 
+        const rowsBody = [];
         for (let i = 0; i < transactions.length; i++) {
+
             const current = transactions[i];
             const bottomBorder = i < transactions.length - 1;
-
             rowsBody.push(
                 <AccountTransactionsItemView key={current.id} id={current.id} amount={current.amount}
                                              category={current.category}
                                              description={current.description} time={current.time}
                                              bottomBorder={bottomBorder}/>
             );
-        }
 
+        }
         return rowsBody;
+
     }
     const getMonthsOptions = () => {
         let monthsOptions = [];
-
         for (let i = 0; i <= 11; i++) {
+
             monthsOptions.push(<option key={i} value={i}>{toMonthName(i)}</option>);
         }
-
         return monthsOptions;
+
     }
     const getYearsOptions = () => {
         let yearsOptions = [];
-
         for (let i = 2020; i <= currentDate.getFullYear(); i++) {
+
             yearsOptions.push(<option key={i} value={i}>{i}</option>);
         }
-
         return yearsOptions;
-    }
 
+    }
     const onBackClick = () => navigate("../dashboard");
+
+    const [filters, setFilters] = useState({
+        month: props.initMonth ?? (currentDate.getMonth()),
+        year: props.initYear ?? currentDate.getFullYear()
+    });
+    const [pending, setPending] = useState(true);
+    const [category, setCategory] = useState("");
+
+    const getMonthlyTransactions = () => {
+        setPending(true);
+        getTransactionsMonthly(dashboardModel.accountId ?? "", filters.year,
+            filters.month + 1, tokenModel.token, category).then(
+            value => {
+                setTransactions(value);
+                setPending(false);
+            },
+            _ => {
+                alert("Error when trying to obtain transactions");
+                setPending(false);
+            }
+        );
+    }
 
     useEffect(() => {
         if (dashboardModel.accountId) {
-            setPending(true);
-            getTransactionsMonthly(dashboardModel.accountId, filters.year,
-                filters.month + 1, tokenModel.token, undefined).then(
-                value => {
-                    setTransactions(value);
-                    setPending(false);
-                },
-                _ => {
-                    alert("Error when trying to obtain transactions");
-                    setPending(false);
-                }
-            );
+            getMonthlyTransactions();
         }
-
-    }, [filters, dashboardModel.accountId, tokenModel.token]);
+    }, [dashboardModel.accountId, tokenModel.token]);
 
     const onChange = (event: any) => {
         const value = Number(event.target.value);
@@ -101,8 +107,8 @@ function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
     return (
         <DashboardItem pending={pending} containerStyle={containerItemStyle} title={"Monthly Transactions"}>
             <div className="row" style={{verticalAlign: "middle", margin: "10px"}}>
-                <div className="col" style={{textAlign: "left"}}>
-                    <Button onClick={() => onBackClick()}>Back</Button>
+                <div className="col-1" style={{textAlign: "left"}}>
+                    <Button className="btn-danger" onClick={() => onBackClick()}>Back</Button>
                 </div>
                 <div className="col" style={{textAlign: "right"}}>
                     <div style={{display: "inline-block"}}>
@@ -138,7 +144,13 @@ function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
                             <Form.Label>Category: </Form.Label>
                         </div>
                         <div style={{display: "inline-block", marginRight: "10px"}}>
-                           <CategoriesSelectView accountId={dashboardModel.accountId} className={"form-control"} />
+                            <CategoriesSelectView accountId={dashboardModel.accountId} className={"form-control"}
+                                                  onChange={setCategory} value={category}/>
+                        </div>
+                    </div>
+                    <div style={{display: "inline-block"}}>
+                        <div style={{display: "inline-block", margin: "0 10px 0 20px"}}>
+                            <Button onClick={getMonthlyTransactions}>Search</Button>
                         </div>
                     </div>
                 </div>

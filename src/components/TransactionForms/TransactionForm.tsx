@@ -78,7 +78,7 @@ function TransactionForm(props: TransactionFormProps) {
             </Form.Group>
             <Form.Group className="mb-3" controlId="category">
                 <Form.Label>Category</Form.Label>
-                <CategoriesSelectView accountId={props.accountId} handleClick={setCategory} className="form-control" ></CategoriesSelectView>
+                <CategoriesSelectView accountId={props.accountId} onChange={setCategory} className="form-control" ></CategoriesSelectView>
             </Form.Group>
             <div style={{textAlign: "right"}}>
                 <Button variant="danger" type="button"

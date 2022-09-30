@@ -4,5 +4,6 @@ export interface CategoriesSelectProps {
     accountId: string | undefined;
     style?: CSSProperties | undefined;
     className?: string;
-    handleClick?: any | undefined;
+    onChange?: any | undefined;
+    value?: string | undefined;
 }
