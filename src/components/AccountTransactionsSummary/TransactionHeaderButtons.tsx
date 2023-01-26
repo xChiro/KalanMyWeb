@@ -18,6 +18,7 @@ function TransactionHeaderButtons(props: TransactionHeaderButtonsProps) {
     return (
         <>
             <ButtonGroup style={{
+                display: "flex",
                 width: "100%",
                 height: "35px",
                 color: "white",

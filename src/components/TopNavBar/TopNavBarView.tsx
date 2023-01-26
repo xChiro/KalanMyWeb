@@ -18,21 +18,24 @@ function TopNavBarView() {
     const loginButton = <Button onClick={() => loginWithRedirect()}>Log in</Button>;
 
     return (
-        <div className="container-fluid" style={{
+        <div style={{
+            display: "flex",
+            flexDirection:"column",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            flexShrink: 1,
             height: "45px",
             background: "#222222",
-            marginBottom: "5px",
-            padding: ".3em 10vw 0px"
+            borderBottom: '1px solid #494544',
+            padding: "0 10.8vw 0px"
         }}>
-            <div className="row" style={{maxWidth: "80vw", margin: "0 auto"}}>
-                <div className="col" style={{textAlign: "left"}}>
-                    <span style={{fontSize: "1em"}}>
-                        Kalan My Money
-                    </span>
-                </div>
-                <div className="col" style={{textAlign: "right"}}>
-                    {isAuthenticated ? logOutButton : loginButton}
-                </div>
+            <div style={{fontSize: "1em", alignSelf: "flex-start"}}>
+                <span>
+                    Kalan My Money
+                </span>
+            </div>
+            <div style={{alignSelf: "flex-end"}}>
+                {isAuthenticated ? logOutButton : loginButton}
             </div>
         </div>
     );
