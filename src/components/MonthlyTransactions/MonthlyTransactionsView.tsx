@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {MonthlyTransactionsProps} from "./MonthlyTransactionsProps";
 import {useAppSelector} from "../../store/hooks";
 import {selectToken} from "../../store/user/user.slice";
@@ -70,29 +70,23 @@ function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
         month: props.initMonth ?? (currentDate.getMonth()),
         year: props.initYear ?? currentDate.getFullYear()
     });
-    const [pending, setPending] = useState(true);
+    const [pending, setPending] = useState(false);
     const [category, setCategory] = useState("");
 
     const getMonthlyTransactions = () => {
-        if (dashboardModel.accountId) {
-            setPending(true);
-            getTransactionsMonthly(dashboardModel.accountId ?? "", filters.year,
-                filters.month + 1, tokenModel.token, category).then(
-                value => {
-                    setTransactions(value);
-                    setPending(false);
-                },
-                _ => {
-                    alert("Error when trying to obtain transactions");
-                    setPending(false);
-                }
-            );
-        }
-    }
-
-    useEffect((fetchFunction = getMonthlyTransactions) => {
-        fetchFunction();
-    }, []);
+        setPending(true);
+        getTransactionsMonthly(dashboardModel.accountId!, filters.year,
+            filters.month + 1, tokenModel.token, category).then(
+            value => {
+                setTransactions(value);
+                setPending(false);
+            },
+            _ => {
+                alert("Error when trying to obtain transactions");
+                setPending(false);
+            }
+        );
+    };
 
     const onChange = (event: any) => {
         const value = Number(event.target.value);

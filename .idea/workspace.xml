@@ -174,7 +174,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MonthlyTransactions/MonthlyTransactionsView.tsx</url>
-          <line>121</line>
+          <line>120</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
