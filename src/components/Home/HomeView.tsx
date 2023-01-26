@@ -17,7 +17,7 @@ function HomeView() {
     useEffect(
         () => {
             if (dashboardModel.accountId === undefined && !dashboardModel.pending && tokenModel.token !== "") {
-                postOpenAccount(null, tokenModel.token).then(
+                postOpenAccount(dashboardModel.accountId!, tokenModel.token).then(
                     () => {
                         dispatch(getDashboard(tokenModel.token));
                         navigate("./dashboard");
