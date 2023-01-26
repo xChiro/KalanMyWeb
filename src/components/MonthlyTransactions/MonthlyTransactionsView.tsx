@@ -94,7 +94,7 @@ function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
         if (dashboardModel.accountId) {
             getMonthlyTransactions();
         }
-    }, [dashboardModel.accountId, tokenModel.token]);
+    }, [dashboardModel.accountId]);
 
     const onChange = (event: any) => {
         const value = Number(event.target.value);
