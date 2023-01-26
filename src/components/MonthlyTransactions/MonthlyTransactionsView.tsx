@@ -12,8 +12,6 @@ import {toMonthName} from "../../utilities/TextFormatters";
 import {selectDashboard} from "../../store/dashboard/dashboard.slice";
 import {useNavigate} from "react-router-dom";
 import CategoriesSelectView from "../CategoriesSelect/CategoriesSelectView";
-import dashboardView from "../Dashboard/DashboardView";
-import DashboardModel from "../../store/dashboard/dashboard.model";
 
 function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
     const tokenModel = useAppSelector(selectToken);
@@ -76,25 +74,25 @@ function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
     const [category, setCategory] = useState("");
 
     const getMonthlyTransactions = () => {
-        setPending(true);
-        getTransactionsMonthly(dashboardModel.accountId ?? "", filters.year,
-            filters.month + 1, tokenModel.token, category).then(
-            value => {
-                setTransactions(value);
-                setPending(false);
-            },
-            _ => {
-                alert("Error when trying to obtain transactions");
-                setPending(false);
-            }
-        );
+        if (dashboardModel.accountId) {
+            setPending(true);
+            getTransactionsMonthly(dashboardModel.accountId ?? "", filters.year,
+                filters.month + 1, tokenModel.token, category).then(
+                value => {
+                    setTransactions(value);
+                    setPending(false);
+                },
+                _ => {
+                    alert("Error when trying to obtain transactions");
+                    setPending(false);
+                }
+            );
+        }
     }
 
-    useEffect(() => {
-        if (dashboardModel.accountId) {
-            getMonthlyTransactions();
-        }
-    }, [dashboardModel.accountId]);
+    useEffect((fetchFunction = getMonthlyTransactions) => {
+        fetchFunction();
+    }, []);
 
     const onChange = (event: any) => {
         const value = Number(event.target.value);
