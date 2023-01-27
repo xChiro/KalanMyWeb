@@ -20,21 +20,19 @@ function TopNavBarView() {
     return (
         <div style={{
             display: "flex",
-            flexDirection:"column",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            flexShrink: 1,
+            alignItems: "center",
+            justifyContent: "space-between",
             height: "45px",
             background: "#222222",
             borderBottom: '1px solid #494544',
             padding: "0 10.8vw 0px"
         }}>
-            <div style={{fontSize: "1em", alignSelf: "flex-start"}}>
+            <div style={{fontSize: "1em"}}>
                 <span>
                     Kalan My Money
                 </span>
             </div>
-            <div style={{alignSelf: "flex-end"}}>
+            <div>
                 {isAuthenticated ? logOutButton : loginButton}
             </div>
         </div>
