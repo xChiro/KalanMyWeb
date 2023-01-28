@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="94cf0dce-7649-44de-b49e-bf32f2a2a306" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopNavBar/TopNavBarView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CategoriesSelect/CategoriesSelectView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CategoriesSelect/CategoriesSelectView.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MonthlyTransactions/MonthlyTransactionsView.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MonthlyTransactions/MonthlyTransactionsView.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +140,7 @@
       <workItem from="1665336406416" duration="1481000" />
       <workItem from="1666733176534" duration="58000" />
       <workItem from="1674741734839" duration="3469000" />
-      <workItem from="1674872564673" duration="326000" />
+      <workItem from="1674872564673" duration="1697000" />
     </task>
     <servers />
   </component>
@@ -175,7 +176,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/MonthlyTransactions/MonthlyTransactionsView.tsx</url>
-          <line>115</line>
+          <line>111</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

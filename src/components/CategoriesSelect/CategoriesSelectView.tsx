@@ -4,7 +4,7 @@ import {useAppSelector} from "../../store/hooks";
 import {selectToken} from "../../store/user/user.slice";
 import {getCategoriesByAccount} from "../../services/CategoriesService";
 
-function CategoriesSelectView(props: CategoriesSelectProps) {
+function    CategoriesSelectView(props: CategoriesSelectProps) {
     const [category, setCategory] = useState(props.value ?? "");
     const tokenModel = useAppSelector(selectToken);
     const [categories, setCategories] = useState([]);

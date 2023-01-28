@@ -98,52 +98,35 @@ function MonthlyTransactionsView(props: MonthlyTransactionsProps) {
 
     return (
         <DashboardItem pending={pending} containerStyle={containerItemStyle} title={"Monthly Transactions"}>
-            <div className="row" style={{verticalAlign: "middle", margin: "10px"}}>
-                <div className="col-1" style={{textAlign: "left"}}>
+            <div style={{display: "flex", justifyContent: "space-between", verticalAlign: "middle", margin: "10px", flexWrap: "wrap"}}>
+                <div>
                     <Button className="btn-danger" onClick={() => onBackClick()}>Back</Button>
                 </div>
-                <div className="col" style={{textAlign: "right"}}>
-                    <div style={{display: "inline-block"}}>
-                        <div style={{display: "inline-block", marginRight: "10px"}}>
-                            <Form.Label>Month: </Form.Label>
-                        </div>
-                        <div style={{display: "inline-block"}}>
-                            <Form.Select
-                                id="month"
-                                aria-label="Default select example"
-                                value={filters.month}
-                                onChange={onChange}>
-                                {getMonthsOptions()}
-                            </Form.Select>
-                        </div>
+                <div style={{display: "flex", gap: "10px", flexWrap: "wrap"}}>
+                    <div>
+                        <Form.Select
+                            id="month"
+                            aria-label="Default select example"
+                            value={filters.month}
+                            onChange={onChange}>
+                            {getMonthsOptions()}
+                        </Form.Select>
                     </div>
-                    <div style={{display: "inline-block"}}>
-                        <div style={{display: "inline-block", margin: "0 10px 0 20px"}}>
-                            <Form.Label>Year: </Form.Label>
-                        </div>
-                        <div style={{display: "inline-block", marginRight: "10px"}}>
-                            <Form.Select
-                                id="year"
-                                aria-label="Default select example"
-                                value={filters.year}
-                                onChange={onChange}>
-                                {getYearsOptions()}
-                            </Form.Select>
-                        </div>
+                    <div>
+                        <Form.Select
+                            id="year"
+                            aria-label="Default select example"
+                            value={filters.year}
+                            onChange={onChange}>
+                            {getYearsOptions()}
+                        </Form.Select>
                     </div>
-                    <div style={{display: "inline-block"}}>
-                        <div style={{display: "inline-block", margin: "0 10px 0 20px"}}>
-                            <Form.Label>Category: </Form.Label>
-                        </div>
-                        <div style={{display: "inline-block", marginRight: "10px"}}>
-                            <CategoriesSelectView accountId={dashboardModel.accountId} className={"form-control"}
-                                                  onChange={setCategory} value={category}/>
-                        </div>
+                    <div>
+                        <CategoriesSelectView accountId={dashboardModel.accountId} className={"form-control"}
+                                              onChange={setCategory} value={category}/>
                     </div>
-                    <div style={{display: "inline-block"}}>
-                        <div style={{display: "inline-block", margin: "0 10px 0 20px"}}>
+                    <div>
                             <Button onClick={getMonthlyTransactions}>Search</Button>
-                        </div>
                     </div>
                 </div>
             </div>
