@@ -27,14 +27,12 @@ function TopNavBarView() {
             borderBottom: '1px solid #494544',
             padding: "0 10.8vw 0px"
         }}>
-            <div style={{fontSize: "1em"}}>
-                <span>
-                    Kalan My Money
-                </span>
-            </div>
-            <div>
+            <h1 style={{ fontSize: "1.1em", margin: "0" }}>
+                Kalan My Money
+            </h1>
+            <nav>
                 {isAuthenticated ? logOutButton : loginButton}
-            </div>
+            </nav>
         </div>
     );
 }
